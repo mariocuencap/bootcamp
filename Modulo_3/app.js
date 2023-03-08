@@ -1,13 +1,14 @@
 /*
 // Calcular el total de la compra de un producto
 
-const product = { count: 3, price: 12.55, type: "ropa" };
+const product = { count: 4, price: 12.55, type: "ropa" };
 
 let total;
-let descuento;
+let iva;
 const libro = 0.04;
 const alimentacion = 0.1;
 const resto = 0.21;
+
 
 if (product.count <= 0) {
     total = 0;
@@ -15,23 +16,24 @@ if (product.count <= 0) {
     total = product.count * product.price;
 }
 
-console.log("El precio total, sin descuento aplicado es de: " + total + "€");
+console.log("El precio total, sin iva aplicado es de: " + total + "€");
 
 switch (product.type) {
     case "libro":
-        descuento = total * libro;
+        iva = total * libro;
         break;
     case "alimentacion":
-        descuento = total * alimentacion;
+        iva = total * alimentacion;
         break;
     default:
-        descuento = total * resto;
+        iva = total * resto;
     break;
 }
 
-console.log("El producto es de tipo " + product.type);
+console.log("El producto es de tipo " + product.type + ", por tanto el iva corresponde a " + iva + "€");
 
-console.log("El precio final, una vez aplicado el descuento es de: " + (total - descuento) + "€");
+console.log("El precio final, una vez aplicado el iva es de: " + (total + iva) + "€");
+
 */
 
 
@@ -55,9 +57,9 @@ if (empleado.hijos > 0) {
 if (empleado.bruto < 12000) {
   retencion = 0;
   retencionAplicada = 0;
-} else if (empleado.bruto < 24000 || empleado.bruto >= 12000) {
+} else if (empleado.bruto <= 24000) {
   retencionAplicada = empleado.bruto * ((8 + retencion) / 100);
-} else if (empleado.bruto < 34000 || empleado.bruto >= 24000) {
+} else if (empleado.bruto <= 34000) {
   retencionAplicada = empleado.bruto * ((16 + retencion) / 100);
 } else if (empleado.bruto > 34000) {
   retencionAplicada = empleado.bruto * ((30 + retencion) / 100);
