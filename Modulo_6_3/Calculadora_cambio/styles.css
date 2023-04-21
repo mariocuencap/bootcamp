@@ -1,0 +1,12 @@
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+.calcular{
+    margin-top: 10px;
+}
+
+label{
+padding-top: 10px;
+}
