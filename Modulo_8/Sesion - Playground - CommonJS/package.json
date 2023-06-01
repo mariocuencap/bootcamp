@@ -1,0 +1,12 @@
+{
+  "name": "sesion---playground",
+  "version": "1.0.0",
+  "description": "Playground de ejemplo modulo 8 ",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
